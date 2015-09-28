@@ -1,0 +1,44 @@
+html, body {
+	height:100%;
+	margin:0;
+}
+
+body{
+	background: url("http://static.vecteezy.com/system/resources/previews/000/092/926/original/question-mark-background-in-vector.jpg") no-repeat;
+	background-size:cover;
+	background-color:#2F292B;
+	color:#5BB9C3;
+}
+
+a {
+	text-decoration: none;
+	color:#5BB9C3;
+}
+
+h1 {
+	margin-top:0;
+	padding: 15px;
+	color:#5BB9C3;
+}
+
+h2{
+	margin-top:5px;
+	margin-bottom: 5px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#content {
+	text-align:center;
+	background-color:#2F292B;
+	width:70%;
+	margin:0 auto;
+	height:100%;
+	border-left:1px solid black;
+	border-right:1px solid black;
+	padding:25px;
+
+}
+

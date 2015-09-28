@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quiz App</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/script.js"></script>
+</head>
+<body>
+	<div id="content">
+		<header>
+				<h1>Trivia Quiz</h1>
+		</header>		
+
+<div id="intrusctions">
+		<h2>Test your world knowledge, from baseball to music.</h2>
+
+		<div id="start">
+				<a href="#">Start</a>
+		</div>		
+</div>
+
+<div id="quiz">
+
+	<div id="questions">
+		<h2 id="current"></h2>
+	</div>
+	
+	<div id="choices">
+		<ul>
+				<li><label for="radios0"><input type="radio" name="radios" id="radios0" value="1"></label></li><li><label for="radios1"><input type="radio" name="radios" id="radios1" value="2"></label></li><li><label for="radios2"><input type="radio" name="radios" id="radios2" value="3"></label></li>
+				<li><label for="radios3"><input type="radio" name="radios" id="radios3" value="4"></label></li>
+		</ul>
+	</div>
+
+	<div id="feedback">
+		<div id="submit"><h2>Check answer</h2>
+	</div>
+	
+	<div id="next">
+		<h2>Next Question</h2>
+	</div>
+	</div>
+
+	<div id="count"></div>
+
+	<div id="playagain">
+		<h2>Play again?</h2>
+	</div>
+	</div>						
+</body>
+</html>
