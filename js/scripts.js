@@ -38,7 +38,7 @@ function startGame() {
 	currentQuestion= 1;
 		correctAnswers = 0;
 		questionIndex = 0;
-		$("#question").show();
+		$("#questions").show();
 		$("#choices").show();
 		$("#submit").show();
 		$("#playagain").hide();
@@ -58,7 +58,7 @@ function getQuestion(){
 
 /*check answer */
 
-function checkAnswer
+function checkAnswer(){
 	var radioValue = false;
 	var userChoice = document.getElementByName('radios');
 	for (var i = 0; i < userChoice.length; i++) {
@@ -66,6 +66,10 @@ function checkAnswer
 			radioValue = userChoice[i].value;
 		};
 	};
+
+if (radioValue === false) {
+	alert ("Please pick an answer");
+}
 
 //if correct
 
@@ -118,7 +122,7 @@ $("#playagain").click(function() {
 	$("#next").show();
 	startGame();
 });
-});
+}});
 
 
 
