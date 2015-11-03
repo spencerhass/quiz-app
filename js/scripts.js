@@ -1,24 +1,24 @@
 $(document).ready (function(){
 
-var questions = [
+var questions = [ 
 {
 	qNum: 1,
 	q: "What team did Babe Ruth first play for?",
 	choices: ["Yankees", "Red Sox", "White Sox", "Dodgers"],
-	correct: 1
+	correct: 2
 },
 {
 	qNum: 2,
 	q:"What year did the Beatles break up?",
 	choices: ["1980", "1969", "1975", "1970"],
-	correct: 3
+	correct: 2
 },
 
 {
 	qNum: 3,
 	q:"Who was one of the most famous serial killers in the 1970s?",
 	choices:["Ted Bundy", "Ronald Dominque", "Chester Turner", "H.H. Holmes"],
-	correct: 0
+	correct: 1
 }
 ];
 
@@ -47,7 +47,7 @@ function startGame() {
 };
 
 function getQuestion(){
-	questionIndex++;
+	//questionIndex++;
 	$("#current").text(questions[questionIndex].q);
 	$("#choice0").text(questions[questionIndex].choices[0]);
 	$("#choice1").text(questions[questionIndex].choices[1]);
@@ -57,14 +57,12 @@ function getQuestion(){
 };
 
 /*check answer */
-
 function checkAnswer(){
-	var radioValue = $("input[type='radio']:checked").val();
-	var userChoice = document.getElementByName('radios');
-	
+var radioValue = $("input[type='radio']:checked").val();
+var userChoice =document.getElementsByName('radio');
 
-if (radioValue === false) {
-	alert ("Please pick an answer");
+	if (radioValue === false) {
+	alert("Please pick an answer");
 }
 
 //if correct
@@ -80,21 +78,23 @@ else if (radioValue == questions[questionIndex].correct) {
 
 if (questions[questionIndex].qNum == totalQuestions) {
 	$("#next").hide();
-	$("#count").text ("Congrats! You got " + correctAnswers + "out of " + totalQuestions + " correct!");
+	$("#count").text ("Congrats! You got " +  correctAnswers + " out of " + totalQuestions + " correct!");
 
 	$("#playagain").show();
 	$("#submit").hide();
 } else {
 	$("#next").show();
-};
+	};
 
-$("#next").click (function() {
+}
+
+$("#next").click(function() {
 	nextQuestion();
 	$('input:radio[name=radios]').attr('checked',false);
 });
 
 //click check answer
-$("#feedback").click(function() {
+$("#submit").click(function() {
 	checkAnswer();
 });
 
@@ -113,7 +113,6 @@ $("#playagain").click(function() {
 	$("#next").show();
 	startGame();
 });
-}});
-
+});
 
 

@@ -59,12 +59,16 @@ padding-left:50px;}
 		margin-top: 25px;
 	}
 
+#submit:hover {background-color:#F97046;}	
+
 #next, #playagain {color:#5BB9C3;
 		text-align:center;
 		margin-top: 15px;
 		padding:10px;
 	}
 #playagain {display:none;}
+
+#next:hover, #playagain:hover {color:#F97046;}
 
 #next {display:none;}
 
